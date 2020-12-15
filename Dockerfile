@@ -1,7 +1,6 @@
 FROM ubuntu:latest
-#RUN apt-get install unzip \
-#    && wget https://launchpad.net/rocrail/trunk/2.1/+download/Rocrail-1191-Ubuntu1804-AMD64.zip \
-RUN wget https://launchpad.net/rocrail/trunk/2.1/+download/Rocrail-1191-Ubuntu1804-AMD64.zip \
+RUN apt install unzip \
+    && wget https://launchpad.net/rocrail/trunk/2.1/+download/Rocrail-1191-Ubuntu1804-AMD64.zip \
     && mkdir /rocrail-app \
     && unzip -*.zip -d /rocrail-app \
     && rm *.zip
