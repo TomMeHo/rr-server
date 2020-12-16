@@ -16,5 +16,5 @@ RUN rm *.zip
 
 ENTRYPOINT ["/rocrail-app/bin/rocrail"]
 CMD ["-w /rocrail-data"]
-CMD ["-l /rocrail-app"]
+CMD ["-l /rocrail-app/bin"]
 CMD ["-i /rocrail-data/rocrail_server.ini"]
