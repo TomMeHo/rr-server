@@ -9,9 +9,20 @@ RUN apt-get update \
 		unzip \
 	&& rm -rf /var/lib/apt/lists/*
 
-RUN wget https://launchpad.net/rocrail/trunk/2.1/+download/Rocrail-1191-Ubuntu1804-AMD64.zip
+RUN wget https://launchpad.net/rocrail/trunk/2.1/+download/Rocrail-1191-Ubuntu1804-AMD64.zip \
+    && unzip *.zip -d /rocrail-app \
+    && rm *.zip
 
-RUN unzip *.zip -d /rocrail-app
-RUN rm *.zip
+RUN cd /rocrail-app/web \
+    && unzip userthemes.zip \
+    && rm *.zip
+
+#Ports
+## Rocweb
+EXPOSE 8088/tcp
+## http Service
+EXPOSE 53701/tcp 
+## Rocview Clients
+EXPOSE 8051/tcp
 
 CMD rocrail-app/bin/rocrail -w /rocrail-data -i /rocrail-data/rocrail.ini -l /rocrail-app/bin -t /rocrail-data/trace/trace -img /rocrail-data/img
