@@ -13,9 +13,9 @@ RUN wget https://wiki.rocrail.net/rocrail-snapshot/history/Rocrail-5013-debian11
     && unzip *.zip -d /rocrail-app \
     && rm *.zip
 
-RUN cd /rocrail-app/web \
-    && unzip userthemes.zip \
-    && rm *.zip
+#RUN cd /rocrail-app/web \
+#    && unzip userthemes.zip \
+#    && rm *.zip
 
 #Ports
 ## Rocweb
