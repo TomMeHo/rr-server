@@ -9,7 +9,7 @@ RUN apt-get update \
 		unzip \
 	&& rm -rf /var/lib/apt/lists/*
 
-RUN wget https://launchpad.net/rocrail/trunk/2.1/+download/Rocrail-1191-Ubuntu1804-AMD64.zip \
+RUN wget https://wiki.rocrail.net/rocrail-snapshot/history/Rocrail-5013-debian11-i64.zip \
     && unzip *.zip -d /rocrail-app \
     && rm *.zip
 
