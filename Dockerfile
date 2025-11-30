@@ -9,7 +9,7 @@ RUN apt-get update \
 		unzip \
 	&& rm -rf /var/lib/apt/lists/*
 
-RUN wget https://wiki.rocrail.net/rocrail-snapshot/history/Rocrail-5013-debian11-i64.zip \
+RUN wget https://www.rocrail.online/rocrail-snapshot/history/Rocrail-6329-debian11-i64.zip \
     && unzip *.zip -d /rocrail-app \
     && rm *.zip
 
